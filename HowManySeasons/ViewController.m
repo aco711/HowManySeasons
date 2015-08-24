@@ -14,8 +14,10 @@
 @interface ViewController () <UISearchBarDelegate>
 
 @property (strong, nonatomic) UISearchBar* searchBar;
-@property (strong, nonatomic) UILabel* yearLabel;
-//@property (strong, nonatomic) MovieSearchController* searchBarController;
+@property (strong, nonatomic) UILabel* scoreLabel;
+@property (strong, nonatomic) UILabel* titleLabel;
+
+
 @end
 
 @implementation ViewController
@@ -23,7 +25,7 @@
 -(void)viewDidLoad
 {
     [super viewDidLoad];
-    [self getDataWithString:self.searchBar.text];
+    //[self getDataWithString:self.searchBar.text];
     
 
 }
@@ -35,15 +37,30 @@
 
     self.searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 8, 320, 44)];
     self.searchBar.delegate = self;
-    self.yearLabel = [[UILabel alloc] init];
-    [self.view addSubview:self.yearLabel];
-    [self.yearLabel autoCenterInSuperview];
-    
-    
     [self.view addSubview:self.searchBar];
     [self.searchBar autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:64];
     [self.searchBar autoMatchDimension:ALDimensionWidth toDimension:ALDimensionWidth ofView:self.view];
     [self.searchBar autoSetDimension:ALDimensionHeight toSize:44];
+    
+    self.titleLabel = [[UILabel alloc] init];
+    [self.view addSubview:self.titleLabel];
+    self.titleLabel.text = @"MOVIE";
+    [self.titleLabel autoPinEdgeToSuperviewMargin:ALEdgeLeft];
+    [self.titleLabel autoPinEdgeToSuperviewMargin:ALEdgeRight];
+    [self.titleLabel autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:120];
+    [self.titleLabel autoAlignAxisToSuperviewAxis:ALAxisVertical];
+    self.titleLabel.textAlignment = NSTextAlignmentCenter;
+    self.titleLabel.font = [UIFont systemFontOfSize:40];
+    self.titleLabel.numberOfLines = 1;
+    self.titleLabel.adjustsFontSizeToFitWidth = YES;
+    
+    self.scoreLabel = [[UILabel alloc] init];
+    [self.view addSubview:self.scoreLabel];
+    self.scoreLabel.font = [UIFont systemFontOfSize:55];
+    [self.scoreLabel autoCenterInSuperview];
+    
+    
+    
     
     
     
@@ -56,6 +73,7 @@
 {
     [self getDataWithString:self.searchBar.text];
 }
+
 
 
 
@@ -76,9 +94,26 @@
     
     [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
         
-        // 3
+        self.titleLabel.text = [(NSDictionary*)responseObject valueForKey:@"Title"];
+        NSInteger score = [[(NSDictionary*)responseObject valueForKey:@"Metascore"] integerValue];
+        self.scoreLabel.text = [(NSDictionary*)responseObject valueForKey:@"Metascore"];
         
-        self.yearLabel.text = [(NSDictionary*)responseObject valueForKey:@"Year"];
+        if (score > 75)
+        {
+            self.scoreLabel.textColor = [UIColor greenColor];
+        }
+        else
+        {
+            self.scoreLabel.textColor = [UIColor redColor];
+        }
+        
+        if ([self.scoreLabel.text isEqualToString:@"N/A"])
+        {
+            self.scoreLabel.text = [NSString stringWithFormat:@"%@ (IMDB)",[(NSDictionary*)responseObject valueForKey:@"imdbRating"]];
+            self.scoreLabel.textColor = [UIColor blackColor];
+        }
+        
+       
         
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {

@@ -14,6 +14,7 @@
 		2AE987291B8A2BA100D06071 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AE987281B8A2BA100D06071 /* Images.xcassets */; };
 		2AE9872C1B8A2BA100D06071 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AE9872A1B8A2BA100D06071 /* LaunchScreen.xib */; };
 		2AE987381B8A2BA100D06071 /* HowManySeasonsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AE987371B8A2BA100D06071 /* HowManySeasonsTests.m */; };
+		2AF762AC1B8BC05400EBD3BA /* LCZoomTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AF762AB1B8BC05400EBD3BA /* LCZoomTransition.m */; };
 		2F17FE1E476257CAA4D4A6D3 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F77786DFED634F12002784B3 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,8 @@
 		2AE987311B8A2BA100D06071 /* HowManySeasonsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HowManySeasonsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AE987361B8A2BA100D06071 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2AE987371B8A2BA100D06071 /* HowManySeasonsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HowManySeasonsTests.m; sourceTree = "<group>"; };
+		2AF762AA1B8BC05400EBD3BA /* LCZoomTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCZoomTransition.h; path = ../../../AnimatedTransitionGallery/submodules/LCZoomTransition/LCZoomTransition/LCZoomTransition.h; sourceTree = "<group>"; };
+		2AF762AB1B8BC05400EBD3BA /* LCZoomTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LCZoomTransition.m; path = ../../../AnimatedTransitionGallery/submodules/LCZoomTransition/LCZoomTransition/LCZoomTransition.m; sourceTree = "<group>"; };
 		393B7F5F15DCE97ED3AC4EF1 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		44D5B497E1B4683DA444A487 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		F77786DFED634F12002784B3 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,6 +98,8 @@
 				2AE987251B8A2BA100D06071 /* Main.storyboard */,
 				2AE987281B8A2BA100D06071 /* Images.xcassets */,
 				2AE9872A1B8A2BA100D06071 /* LaunchScreen.xib */,
+				2AF762AA1B8BC05400EBD3BA /* LCZoomTransition.h */,
+				2AF762AB1B8BC05400EBD3BA /* LCZoomTransition.m */,
 				2AE9871B1B8A2BA100D06071 /* Supporting Files */,
 			);
 			path = HowManySeasons;
@@ -278,6 +283,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AF762AC1B8BC05400EBD3BA /* LCZoomTransition.m in Sources */,
 				2AE987241B8A2BA100D06071 /* ViewController.m in Sources */,
 				2AE987211B8A2BA100D06071 /* AppDelegate.m in Sources */,
 				2AE9871E1B8A2BA100D06071 /* main.m in Sources */,
