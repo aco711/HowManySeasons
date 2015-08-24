@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2AA677BE1B8AAAC000638045 /* MovieTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA677BD1B8AAAC000638045 /* MovieTableView.m */; };
 		2AE9871E1B8A2BA100D06071 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AE9871D1B8A2BA100D06071 /* main.m */; };
 		2AE987211B8A2BA100D06071 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AE987201B8A2BA100D06071 /* AppDelegate.m */; };
 		2AE987241B8A2BA100D06071 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AE987231B8A2BA100D06071 /* ViewController.m */; };
@@ -29,8 +28,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2AA677BC1B8AAAC000638045 /* MovieTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MovieTableView.h; path = ../MovieTableView.h; sourceTree = "<group>"; };
-		2AA677BD1B8AAAC000638045 /* MovieTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MovieTableView.m; path = ../MovieTableView.m; sourceTree = "<group>"; };
 		2AE987181B8A2BA100D06071 /* HowManySeasons.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HowManySeasons.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AE9871C1B8A2BA100D06071 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2AE9871D1B8A2BA100D06071 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -96,8 +93,6 @@
 				2AE987221B8A2BA100D06071 /* ViewController.h */,
 				2AE987231B8A2BA100D06071 /* ViewController.m */,
 				2AE987251B8A2BA100D06071 /* Main.storyboard */,
-				2AA677BC1B8AAAC000638045 /* MovieTableView.h */,
-				2AA677BD1B8AAAC000638045 /* MovieTableView.m */,
 				2AE987281B8A2BA100D06071 /* Images.xcassets */,
 				2AE9872A1B8A2BA100D06071 /* LaunchScreen.xib */,
 				2AE9871B1B8A2BA100D06071 /* Supporting Files */,
@@ -285,7 +280,6 @@
 			files = (
 				2AE987241B8A2BA100D06071 /* ViewController.m in Sources */,
 				2AE987211B8A2BA100D06071 /* AppDelegate.m in Sources */,
-				2AA677BE1B8AAAC000638045 /* MovieTableView.m in Sources */,
 				2AE9871E1B8A2BA100D06071 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

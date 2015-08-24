@@ -11,5 +11,8 @@
 @interface ViewController : UIViewController
 
 
+-(void)getDataWithString:(NSString*)string;
+
+
 @end
 

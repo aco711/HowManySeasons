@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>15187B65-6B1A-4531-861A-1C4068CC5F3D</string>
+	<key>IDESourceControlProjectName</key>
+	<string>HowManySeasons</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>E5F560999C7970CCF605B4D95627A5265D9BA1B2</key>
+		<string>https://github.com/aco711/HowManySeasons.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>HowManySeasons.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>E5F560999C7970CCF605B4D95627A5265D9BA1B2</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/aco711/HowManySeasons.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>E5F560999C7970CCF605B4D95627A5265D9BA1B2</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E5F560999C7970CCF605B4D95627A5265D9BA1B2</string>
+			<key>IDESourceControlWCCName</key>
+			<string>HowManySeasons</string>
+		</dict>
+	</array>
+</dict>
+</plist>
