@@ -27,6 +27,7 @@
     //[self.imageView autoCenterInSuperview];
     [self.imageView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero excludingEdge:ALEdgeTop];
     [self.imageView autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:self.navigationController.navigationBar.bounds.size.height];
+   
     
     
     

@@ -69,6 +69,8 @@
     self.scoreLabel.font = [UIFont systemFontOfSize:55];
     [self.scoreLabel autoCenterInSuperview];
     
+    [self.view setBackgroundColor:[UIColor colorWithRed:.2 green:.4 blue:.4 alpha:1]];
+    
  
     
 }
