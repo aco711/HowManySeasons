@@ -9,6 +9,8 @@
 #import "ViewController.h"
 #import <PureLayout/PureLayout.h>
 #import <AFNetworking/AFNetworking.h>
+#import "LCZoomTransition.h"
+#import "MoreInfoViewController.h"
 
 
 @interface ViewController () <UISearchBarDelegate>
@@ -16,7 +18,9 @@
 @property (strong, nonatomic) UISearchBar* searchBar;
 @property (strong, nonatomic) UILabel* scoreLabel;
 @property (strong, nonatomic) UILabel* titleLabel;
+@property (strong, nonatomic) NSString* imageURLToSend;
 
+@property (nonatomic, strong) LCZoomTransition *zoomTransition;
 
 @end
 
@@ -25,6 +29,7 @@
 -(void)viewDidLoad
 {
     [super viewDidLoad];
+    self.zoomTransition = [[LCZoomTransition alloc] initWithNavigationController:self.navigationController];
     //[self getDataWithString:self.searchBar.text];
     
 
@@ -54,21 +59,29 @@
     self.titleLabel.numberOfLines = 1;
     self.titleLabel.adjustsFontSizeToFitWidth = YES;
     
+    UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(titleLabelTapped)];
+    tapGestureRecognizer.numberOfTapsRequired = 1;
+    [self.titleLabel addGestureRecognizer:tapGestureRecognizer];
+    self.titleLabel.userInteractionEnabled = YES;
+    
     self.scoreLabel = [[UILabel alloc] init];
     [self.view addSubview:self.scoreLabel];
     self.scoreLabel.font = [UIFont systemFontOfSize:55];
     [self.scoreLabel autoCenterInSuperview];
     
-    
-    
-    
-    
-    
-   
+ 
     
 }
 
+-(void)titleLabelTapped
+{
+    MoreInfoViewController* miVC = [[MoreInfoViewController alloc] init];
+    [miVC setGestureTarget:self.zoomTransition];
+    miVC.imageURL = self.imageURLToSend;
+    self.zoomTransition.sourceView = self.titleLabel;
+    [self showViewController:miVC sender:self.titleLabel];
 
+}
 -(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
 {
     [self getDataWithString:self.searchBar.text];
@@ -96,7 +109,8 @@
         
         self.titleLabel.text = [(NSDictionary*)responseObject valueForKey:@"Title"];
         NSInteger score = [[(NSDictionary*)responseObject valueForKey:@"Metascore"] integerValue];
-        self.scoreLabel.text = [(NSDictionary*)responseObject valueForKey:@"Metascore"];
+        self.scoreLabel.text = [NSString stringWithFormat:@"%@/100",[(NSDictionary*)responseObject valueForKey:@"Metascore"]];
+        self.imageURLToSend =[(NSDictionary*)responseObject valueForKey:@"Poster"];
         
         if (score > 75)
         {
