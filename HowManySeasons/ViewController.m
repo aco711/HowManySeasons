@@ -7,17 +7,39 @@
 //
 
 #import "ViewController.h"
+#import "MovieTableView.h"
+#import <PureLayout/PureLayout.h>
+
 
 @interface ViewController ()
+
+@property (strong, nonatomic) MovieTableView * tableView;
 
 @end
 
 @implementation ViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+-(void)loadView
+{
+    [super loadView];
+    
+    self.tableView = [[MovieTableView alloc] init];
+    
+    [self.view addSubview:self.tableView];
+    
+
+    
+    
+
+    
+    [self.tableView autoCenterInSuperview];
+    [self.tableView autoPinEdgesToSuperviewEdges];
+    
+   
+    
 }
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
