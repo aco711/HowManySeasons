@@ -1,3 +1,5 @@
 # HowManySeasons
 
-How many seasons in a given show.
+First time using an API and AFNetworking. 
+User can search a movie and view its metacritic score.
+
